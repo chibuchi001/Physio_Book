@@ -112,16 +112,15 @@ async function main() {
 
   // Create sample exercise plan
   const exercisePlan = await prisma.exercisePlan.upsert({
-    where: { id: "default-lower-back-plan" },
-    update: {},
-    create: {
-      id: "default-lower-back-plan",
-      name: "Lower Back Rehabilitation Program",
-      description: "A 4-week program designed to strengthen the core and reduce lower back pain.",
-      targetCondition: "Chronic Lower Back Pain",
-      durationWeeks: 4,
-    },
-  });
+  where: { name: "Lower Back Rehabilitation Program" },
+  update: {},
+  create: {
+    name: "Lower Back Rehabilitation Program",
+    description: "A 4-week program designed to strengthen the core and reduce lower back pain.",
+    targetCondition: "Chronic Lower Back Pain",
+    durationWeeks: 4,
+  },
+});
 
   console.log(`✅ Created exercise plan: ${exercisePlan.name}`);
 
