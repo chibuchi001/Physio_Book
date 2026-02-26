@@ -366,7 +366,7 @@ enum ExerciseCategory {
 
 model ExercisePlan {
   id                    String   @id @default(cuid())
-  name                  String
+  name                  String   @unique
   description           String?  @db.Text
   targetCondition       String?
   durationWeeks         Int      @default(4)
