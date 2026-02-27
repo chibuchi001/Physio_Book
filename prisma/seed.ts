@@ -102,10 +102,10 @@ async function main() {
 
   for (const exercise of exercises) {
     await prisma.exercise.upsert({
-      where: { name: exercise.name },
-      update: exercise,
-      create: exercise as any,
-    });
+    where: { name: exercise.name },
+    update: exercise as any,  // ← add `as any` here
+    create: exercise as any,
+});
   }
 
   console.log(`✅ Created ${exercises.length} exercises`);
