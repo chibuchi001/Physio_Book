@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "AI-Powered Physiotherapy Booking Platform with Intelligent Triage, Therapist Matching, and Exercise Guidance",
   "private": true,
-  {
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && prisma db push && next build",
@@ -20,7 +19,6 @@
 
   "prisma": {
     "seed": "tsx prisma/seed.ts"
-  }
 },
   "dependencies": {
     "@clerk/nextjs": "^5.7.1",
